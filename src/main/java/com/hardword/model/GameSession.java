@@ -9,8 +9,19 @@ public class GameSession {
         this.attempts = 0;
     }
 
-    public String getTargetWord() { return targetWord; }
-    public void setTargetWord(String targetWord) { this.targetWord = targetWord; }
-    public int getAttempts() { return attempts; }
-    public void setAttempts(int attempts) { this.attempts = attempts; }
+    public String getTargetWord() {
+        return targetWord;
+    }
+
+    public void setTargetWord(String targetWord) {
+        this.targetWord = targetWord;
+    }
+
+    public int getAttempts() {
+        return attempts;
+    }
+
+    public void setAttempts(int attempts) {
+        this.attempts = attempts;
+    }
 }

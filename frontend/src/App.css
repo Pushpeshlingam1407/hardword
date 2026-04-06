@@ -59,8 +59,11 @@ h1 {
 
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +78,7 @@ h1 {
   border-radius: 12px;
   max-width: 400px;
   width: 90%;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
 }
 
 .modal-content ul {
@@ -88,7 +91,7 @@ h1 {
 }
 
 .rules-example {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 15px;
   border-radius: 8px;
   margin: 15px 0;
@@ -168,7 +171,9 @@ h1 {
 }
 
 @keyframes pop {
-  50% { transform: scale(1.1); }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .tile.filled {
@@ -225,8 +230,14 @@ h1 {
 }
 
 @keyframes fadein {
-  from { top: 0; opacity: 0; }
-  to { top: -10px; opacity: 1; }
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: -10px;
+    opacity: 1;
+  }
 }
 
 .game-over {
@@ -239,7 +250,7 @@ h1 {
   border: 1px solid var(--tile-border);
   z-index: 20;
   backdrop-filter: blur(5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   width: 80%;
   max-width: 350px;
 }
