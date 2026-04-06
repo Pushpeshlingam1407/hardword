@@ -1,0 +1,7 @@
+com\hardword\config\CorsConfig.class
+com\hardword\model\GameSession.class
+com\hardword\model\GuessRequest.class
+com\hardword\service\GameService.class
+com\hardword\controller\GameController.class
+com\hardword\HardwordApplication.class
+com\hardword\model\GuessResponse.class
