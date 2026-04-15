@@ -13,4 +13,4 @@ COPY --from=build /app/target/*.jar app.jar
 # Expose port (Render defaults to looking for port 8080 or process.env.PORT)
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "-Dserver.port=${PORT:8080}", "app.jar"]
+ENTRYPOINT ["sh", "-c", "java -jar -Dserver.port=${PORT:-8080} app.jar"]
