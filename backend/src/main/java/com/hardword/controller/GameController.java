@@ -25,23 +25,29 @@ public class GameController {
         return ResponseEntity.ok("Hardword backend is running. Use POST /api/game/start or POST /api/start to begin.");
     }
 
-    @GetMapping(path = {"/start", "/game/start"})
+    @GetMapping("/game")
+    public ResponseEntity<String> gameInfo() {
+        return ResponseEntity.ok("Hardword backend is running. Use POST /api/game/start to begin.");
+    }
+
+    @GetMapping(path = { "/start", "/game/start" })
     public ResponseEntity<String> startInfo() {
         return ResponseEntity.ok("Send a POST request to /api/game/start or /api/start to create a game session.");
     }
 
-    @GetMapping(path = {"/guess", "/game/guess"})
+    @GetMapping(path = { "/guess", "/game/guess" })
     public ResponseEntity<String> guessInfo() {
-        return ResponseEntity.ok("Send a POST request to /api/game/guess or /api/guess with JSON body {\"sessionId\":\"...\",\"guess\":\"WORD\"}.");
+        return ResponseEntity.ok(
+                "Send a POST request to /api/game/guess or /api/guess with JSON body {\"sessionId\":\"...\",\"guess\":\"WORD\"}.");
     }
 
-    @PostMapping(path = {"/game/start", "/start"})
+    @PostMapping(path = { "/game/start", "/start" })
     public ResponseEntity<?> startGame() {
         String sessionId = gameService.startNewSession();
         return ResponseEntity.ok(Map.of("sessionId", sessionId));
     }
 
-    @PostMapping(path = {"/game/guess", "/guess"})
+    @PostMapping(path = { "/game/guess", "/guess" })
     public ResponseEntity<?> makeGuess(@RequestBody GuessRequest request) {
         try {
             GuessResponse response = gameService.processGuess(request.getSessionId(), request.getGuess());
